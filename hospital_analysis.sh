@@ -2,6 +2,7 @@
 
 process_vitals() {
 
+    echo "===== KNH CRITICAL VITALS ANALYSIS ====="
     echo "Analyzing patient vital signs..."
 
     mkdir -p reports
@@ -22,7 +23,5 @@ process_vitals() {
     ' >> reports/critical_alerts.txt
 
     echo "Critical alerts report generated."
-    echo "Report saved to reports/critical_alerts.txt"
+    echo "Analysis complete."
 }
-
-process_vitals
