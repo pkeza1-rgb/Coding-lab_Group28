@@ -23,5 +23,7 @@ process_vitals() {
     ' >> reports/critical_alerts.txt
 
     echo "Critical alerts report generated."
-    echo "Analysis complete."
+    echo "Report saved in reports/critical_alerts.txt"
 }
+
+process_vitals
