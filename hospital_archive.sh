@@ -1,4 +1,5 @@
 #!/bin/bash
+timestamp=$(date +"%Y%m%d_%H%M")
 mkdir -p active_logs
 mkdir -p archived_logs
 echo "Starting archive process at $timestamp"
