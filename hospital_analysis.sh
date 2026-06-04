@@ -27,11 +27,7 @@ process_vitals() {
 }
 
 process_vitals
-=======
-# Member 5 function placeholder (not your work)
-process_vitals() {
-    echo "Member 5 function not implemented here"
-}
+
 
 # ==============================
 # Member 6 - Facility Auditor
@@ -60,15 +56,15 @@ water_audit() {
         $2 ~ /ICU_WATER_RESERVE/ {
             count++
         }
-        END {print count}
+        END {print count+0}
     ' "$file")
-
+count=${count:-0}
     if [ "$count" -eq 0 ]; then
         echo "No ICU water data found."
         return
     fi
 
-    avg=$(echo "scale=2; $total / $count" | bc)
+    avg=$(echo "scale=2; ${total:-0} / $count" | bc)
 
     printf "\n===== ICU WATER AUDIT REPORT =====\n"
     printf "Total ICU Water Usage: %s\n" "$total"
