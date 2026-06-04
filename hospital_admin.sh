@@ -30,3 +30,7 @@ secure_data() {
     ls -ld active_logs
     ls -l active_logs
 }
+initialize_system
+secure_data
+
+echo "System Environment Secured on $(date)"
